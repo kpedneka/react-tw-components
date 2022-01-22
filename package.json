@@ -1,7 +1,7 @@
 {
   "name": "react-tw-components",
-  "version": "0.1.0",
-  "description": "Made with create-react-library",
+  "version": "0.1.2",
+  "description": "A responsive react component library built with tailwindcss",
   "author": "kpedneka",
   "license": "MIT",
   "repository": "",
