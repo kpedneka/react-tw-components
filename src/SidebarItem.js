@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 class SidebarItem extends React.Component {
   constructor(props) {
@@ -18,6 +19,15 @@ class SidebarItem extends React.Component {
       </div>
     )
   }
+}
+
+SidebarItem.propTypes = {
+  title: PropTypes.string,
+  icon: PropTypes.element,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node
+  ])
 }
 
 export default SidebarItem

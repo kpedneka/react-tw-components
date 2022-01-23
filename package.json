@@ -1,6 +1,6 @@
 {
   "name": "react-tw-components",
-  "version": "0.1.2",
+  "version": "0.1.4",
   "description": "A responsive react component library built with tailwindcss",
   "author": "kpedneka",
   "license": "MIT",
@@ -43,6 +43,7 @@
     "microbundle-crl": "^0.13.10",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.0.4",
+    "prop-types": "^15.8.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "^3.4.1"

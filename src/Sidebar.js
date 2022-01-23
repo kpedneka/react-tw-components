@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { HiX } from 'react-icons/hi'
 
 class Sidebar extends React.Component {
@@ -30,6 +31,17 @@ class Sidebar extends React.Component {
       </nav>
     )
   }
+}
+
+Sidebar.propTypes = {
+  icon: PropTypes.element,
+  title: PropTypes.string,
+  state: PropTypes.bool.isRequired,
+  onClose: PropTypes.func.isRequired,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node
+  ])
 }
 
 export default Sidebar

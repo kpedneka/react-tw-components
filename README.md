@@ -17,6 +17,8 @@ If you answered yes to any of these, this component is designed for you! I desig
 
 This library is under active development. It's my first contribution to open source, so I appreciate your patience as I iron out the bugs and design. I'm very open to contributors and working on new features. Keep in touch, happy hacking!
 
+#### For documentaton, please visit [the repository](https://github.com/kpedneka/react-tw-components) on GitHub and view DOCUMENTATION.md in the root directory
+
 ## Install
 
 ```bash

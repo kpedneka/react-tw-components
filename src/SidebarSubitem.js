@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 class SidebarSubitem extends React.Component {
   constructor(props) {
@@ -12,6 +13,10 @@ class SidebarSubitem extends React.Component {
       </div>
     )
   }
+}
+
+SidebarSubitem.propTypes = {
+  title: PropTypes.string
 }
 
 export default SidebarSubitem

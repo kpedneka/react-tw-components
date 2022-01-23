@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 class Body extends React.Component {
   render() {
@@ -9,6 +10,13 @@ class Body extends React.Component {
       </div>
     )
   }
+}
+
+Body.propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node
+  ]).isRequired
 }
 
 export default Body

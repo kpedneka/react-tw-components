@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { HiMenu } from 'react-icons/hi'
 
 class Appbar extends React.Component {
@@ -14,6 +15,12 @@ class Appbar extends React.Component {
       </header>
     )
   }
+}
+
+Appbar.propTypes = {
+  title: PropTypes.string,
+  icon: PropTypes.element,
+  onClick: PropTypes.func.isRequired
 }
 
 export default Appbar
