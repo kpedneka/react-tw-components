@@ -8,14 +8,16 @@ class Sidebar extends React.Component {
   constructor(props) {
     super(props)
   }
+  
+  static contextType = ThemeContext
 
   render() {
     const Icon = this.props.icon
+    const { theme, setTheme } = this.context
     return (
-      <ThemeContext.Provider value={this.context}>
         <nav
-          className={`z-50 bg-${this.context.color}-${
-            this.context.intensity
+          className={`z-50 bg-${theme.color}-${
+            theme.intensity
           } text-white w-64 h-screen py-6 space-y-6 inset-y-0 left-0 transform ${
             this.props.state ? '-translate-x-0' : '-translate-x-full'
           } relative md:translate-x-0 transition duration-200 ease-in-out`}
@@ -34,12 +36,9 @@ class Sidebar extends React.Component {
             {this.props.children}
           </div>
         </nav>
-      </ThemeContext.Provider>
     )
   }
 }
-
-Sidebar.contextType = ThemeContext
 
 Sidebar.propTypes = {
   icon: PropTypes.element,
