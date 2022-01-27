@@ -17,7 +17,7 @@ If you answered yes to any of these, this component is designed for you! I desig
 
 This library is under active development. It's my first contribution to open source, so I appreciate your patience as I iron out the bugs and design. I'm very open to contributors and working on new features. Keep in touch, happy hacking!
 
-#### For documentaton, please visit [the repository](https://github.com/kpedneka/react-tw-components) on GitHub and view DOCUMENTATION.md in the root directory
+#### For documentaton, please visit [the repository](https://github.com/kpedneka/react-tw-components) on GitHub and view DOCUMENTATION.md in the documentation directory
 
 ## Install
 
@@ -25,14 +25,23 @@ This library is under active development. It's my first contribution to open sou
 npm install --save react-tw-components
 ```
 
-## Usage
+## Basic usage
 
+Example of how your ```App.js``` can look. This gives an example of how the different components can be used/structured in your application.
 ```jsx
 import React from 'react'
 import { HiAcademicCap } from 'react-icons/hi'
 
-import { Sidebar, SidebarItem, SidebarSubitem, Appbar, Body } from 'react-tw-components'
+import {
+  Sidebar,
+  SidebarItem,
+  SidebarSubitem,
+  Appbar,
+  Body,
+  ThemeContext
+} from 'react-tw-components'
 import 'react-tw-components/dist/index.css'
+
 
 class App extends React.Component {
   constructor(props) {
@@ -41,31 +50,63 @@ class App extends React.Component {
     this.handleEvent = this.handleEvent.bind(this)
   }
 
+  /**
+   * Example function that shows how to link the behavior of Appbar and Sidebar
+   */
   handleEvent() {
     this.setState({ toggleMenu: !this.state.toggleMenu })
   }
 
   render() {
-  const title = 'My site'
-  return (
-    <div className='container z-0'>
-      <Appbar icon={<HiAcademicCap />} title={title} onClick={this.handleEvent} />
-      <Sidebar icon={<HiAcademicCap />} title={title} state={this.state.toggleMenu} onClose={this.handleEvent}>
-        <SidebarItem icon={<HiAcademicCap />} title='Test' />
-        <SidebarItem icon={<HiAcademicCap />} title='Test'>
-          <SidebarSubitem title='Test' />
-        </SidebarItem>
-      </Sidebar>
-      <Body>
-        <p>The content of your website goes here</p>
-      </Body>
-    </div>
-  )
-}
+    const title = 'My site'
+    return (
+      <div>
+        <Appbar
+          icon={<HiAcademicCap />}
+          title={title}
+          onClick={this.handleEvent}
+        />
+        <Sidebar
+          icon={<HiAcademicCap />}
+          title={title}
+          state={this.state.toggleMenu}
+          onClose={this.handleEvent}
+        >
+          <SidebarItem icon={<HiAcademicCap />} title='Test' />
+          <SidebarItem icon={<HiAcademicCap />} title='Test'>
+            <SidebarSubitem title='Test' />
+          </SidebarItem>
+        </Sidebar>
+        <Body>
+          <p>The content of your website goes here</p>
+        </Body>
+      </div>
+    )
+  }
 }
 
 export default App
+
 ```
+
+Your ```index.js``` file should import the theme context provider and wrap your application's root element around it. This is what allows all the ```react-tw-components``` components you use in your application to use a consistent theme.
+```jsx
+import './index.css'
+
+import React from 'react'
+import ReactDOM from 'react-dom'
+import App from './App'
+import { ThemeProvider } from 'react-tw-components'
+
+ReactDOM.render(
+  <ThemeProvider>
+    <App />
+  </ThemeProvider>,
+  document.getElementById('root')
+)
+
+```
+
 
 ## License
 
