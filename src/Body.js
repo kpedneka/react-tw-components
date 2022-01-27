@@ -6,9 +6,11 @@ class Body extends React.Component {
   static contextType = ThemeContext
 
   render() {
-    const { theme, setTheme } = this.context 
+    const { theme, setTheme } = this.context
     return (
-      <div className={`truncate absolute z-10 top-0 my-24 mx-12 py-16 px-10 bg-${theme.color}-${theme.intensity} transform -translate-x-0 md:translate-x-64 transition duration-200 ease-in-out`}>
+      <div
+        className={`absolute w-full md:w-2/3 lg:w-3/4 h-screen z-10 top-0 right-0 px-12 py-16 ${theme.light.secondary.bgColor}`}
+      >
         {' '}
         {this.props.children}
       </div>

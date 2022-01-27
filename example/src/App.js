@@ -1,8 +1,70 @@
 import React from 'react'
 import { HiAcademicCap } from 'react-icons/hi'
 
-import { Sidebar, SidebarItem, SidebarSubitem, Appbar, Body, ThemeContext } from 'react-tw-components'
+import {
+  Sidebar,
+  SidebarItem,
+  SidebarSubitem,
+  Appbar,
+  Body,
+  ThemeContext
+} from 'react-tw-components'
 import 'react-tw-components/dist/index.css'
+
+const theme1 = {
+  light: {
+      primary: {
+        bgColor: 'bg-green-400',
+        bgColorHover: 'bg-green-300',
+        textColor: 'text-white'
+      },
+      secondary: {
+        bgColor: 'bg-gray-200',
+        bgColorHover: 'bg-gray-200',
+        textColor: 'text-black'
+      }
+  },
+  dark: {
+      primary: {
+        bgColor: 'bg-green-400',
+        bgColorHover: 'bg-green-300',
+        textColor: 'text-white'
+      },
+      secondary: {
+        bgColor: 'bg-gray-200',
+        bgColorHover: 'bg-gray-200',
+        textColor: 'text-black'
+      }
+  }
+}
+
+const theme2 = {
+  light: {
+      primary: {
+        bgColor: 'bg-red-400',
+        bgColorHover: 'bg-red-300',
+        textColor: 'text-white'
+      },
+      secondary: {
+        bgColor: 'bg-gray-300',
+        bgColorHover: 'bg-gray-300',
+        textColor: 'text-black'
+      }
+  },
+  dark: {
+      primary: {
+        bgColor: 'bg-red-400',
+        bgColorHover: 'bg-red-300',
+        textColor: 'text-white'
+      },
+      secondary: {
+        bgColor: 'bg-gray-300',
+        bgColorHover: 'bg-gray-300',
+        textColor: 'text-black'
+      }
+  }
+}
+
 
 class App extends React.Component {
   constructor(props) {
@@ -29,27 +91,45 @@ class App extends React.Component {
    */
   toggleTheme() {
     this.setState({ clickCount: this.state.clickCount + 1 })
-    this.state.clickCount % 2 === 0 ? this.context.setTheme({ color: 'red', intensity: '400'}) : this.context.setTheme({ color: 'green', intensity: '400'})
+    if (this.state.clickCount % 2 === 0) {
+      this.context.setTheme(theme2)
+    } else {
+      this.context.setTheme(theme1)
+    }
   }
 
   render() {
-  const title = 'My site'
-  return (
-    <div className='container z-0'>
-      <Appbar icon={<HiAcademicCap />} title={title} onClick={this.handleEvent} />
-      <Sidebar icon={<HiAcademicCap />} title={title} state={this.state.toggleMenu} onClose={this.handleEvent}>
-        <SidebarItem icon={<HiAcademicCap />} title='Test' />
-        <SidebarItem icon={<HiAcademicCap />} title='Test'>
-          <SidebarSubitem title='Test' />
-        </SidebarItem>
-      </Sidebar>
-      <Body>
-        <p>The content of your website goes here</p>
-        <button className='rounded-full bg-black text-white p-2' onClick={this.toggleTheme}>Click to change theme</button>
-      </Body>
-    </div>
-  )
-}
+    const title = 'My site'
+    return (
+      <div>
+        <Appbar
+          icon={<HiAcademicCap />}
+          title={title}
+          onClick={this.handleEvent}
+        />
+        <Sidebar
+          icon={<HiAcademicCap />}
+          title={title}
+          state={this.state.toggleMenu}
+          onClose={this.handleEvent}
+        >
+          <SidebarItem icon={<HiAcademicCap />} title='Test' />
+          <SidebarItem icon={<HiAcademicCap />} title='Test'>
+            <SidebarSubitem title='Test' />
+          </SidebarItem>
+        </Sidebar>
+        <Body>
+          <p>The content of your website goes here</p>
+          <button
+            className='rounded-sm bg-black text-white py-2 px-4'
+            onClick={this.toggleTheme}
+          >
+            Click to change theme
+          </button>
+        </Body>
+      </div>
+    )
+  }
 }
 
 export default App

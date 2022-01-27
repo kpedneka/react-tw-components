@@ -7,4 +7,12 @@ import Body from './Body'
 
 import './tailwind.css'
 
-export { Appbar, Sidebar, SidebarItem, SidebarSubitem, Body, ThemeProvider, ThemeContext }
+export {
+  Appbar,
+  Sidebar,
+  SidebarItem,
+  SidebarSubitem,
+  Body,
+  ThemeProvider,
+  ThemeContext
+}
