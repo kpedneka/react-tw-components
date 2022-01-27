@@ -15,18 +15,6 @@ const baseTheme = {
         bgColorHover: 'bg-gray-200',
         textColor: 'text-black'
       }
-  },
-  dark: {
-      primary: {
-        bgColor: 'bg-green-400',
-        bgColorHover: 'bg-green-300',
-        textColor: 'text-white'
-      },
-      secondary: {
-        bgColor: 'bg-gray-200',
-        bgColorHover: 'bg-gray-200',
-        textColor: 'text-black'
-      }
   }
 }
 

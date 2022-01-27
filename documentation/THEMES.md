@@ -20,14 +20,6 @@ const baseTheme = {
         secondary: {
             ...
         }
-    },
-    dark: {
-        primary: {
-            ...
-        },
-        secondary: {
-            ...
-        }
     }
 }
 ```
@@ -42,16 +34,6 @@ The above structure for the theme is required. You can definitely add more field
  */
 const baseTheme = {
     light: {
-        primary: {
-            ... ,
-            myBgColor: 'bg-indigo-500'
-        },
-        secondary: {
-            ... ,
-            myBgColor: 'bg-indigo-500'
-        }
-    },
-    dark: {
         primary: {
             ... ,
             myBgColor: 'bg-indigo-500'

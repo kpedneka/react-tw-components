@@ -23,35 +23,11 @@ const theme1 = {
         bgColorHover: 'bg-gray-200',
         textColor: 'text-black'
       }
-  },
-  dark: {
-      primary: {
-        bgColor: 'bg-green-400',
-        bgColorHover: 'bg-green-300',
-        textColor: 'text-white'
-      },
-      secondary: {
-        bgColor: 'bg-gray-200',
-        bgColorHover: 'bg-gray-200',
-        textColor: 'text-black'
-      }
   }
 }
 
 const theme2 = {
   light: {
-      primary: {
-        bgColor: 'bg-red-400',
-        bgColorHover: 'bg-red-300',
-        textColor: 'text-white'
-      },
-      secondary: {
-        bgColor: 'bg-gray-300',
-        bgColorHover: 'bg-gray-300',
-        textColor: 'text-black'
-      }
-  },
-  dark: {
       primary: {
         bgColor: 'bg-red-400',
         bgColorHover: 'bg-red-300',
@@ -88,6 +64,8 @@ class App extends React.Component {
 
   /**
    * Example function that shows how a theme can be updated from your application.
+   * The toggleTheme function only exists for the sake of showing it could be done 
+   * dynamically. But you can just set it once when your component loads and leave it
    */
   toggleTheme() {
     this.setState({ clickCount: this.state.clickCount + 1 })
