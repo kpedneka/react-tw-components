@@ -8,6 +8,7 @@ const baseTheme = {
       primary: {
         bgColor: 'bg-green-400',
         bgColorHover: 'bg-green-300',
+        borderColor: 'border-green-400',
         textColor: 'text-white'
       },
       secondary: {

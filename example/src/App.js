@@ -2,11 +2,12 @@ import React from 'react'
 import { HiAcademicCap } from 'react-icons/hi'
 
 import {
+  Appbar,
+  Body,
+  Button,
   Sidebar,
   SidebarItem,
   SidebarSubitem,
-  Appbar,
-  Body,
   ThemeContext
 } from 'react-tw-components'
 import 'react-tw-components/dist/index.css'
@@ -102,8 +103,12 @@ class App extends React.Component {
             className='rounded-sm bg-black text-white py-2 px-4'
             onClick={this.toggleTheme}
           >
-            Click to change theme
+            Click to change themes
           </button>
+          <Button 
+            text='Hello' 
+            icon={<HiAcademicCap/>} />
+          
         </Body>
       </div>
     )
