@@ -11,7 +11,7 @@ class Card extends React.Component {
     render() {
         const { theme, _ } = this.context
         return(
-            <div className={`hover:drop-shadow-lg w-full rounded border ${theme.light.primary.borderColor} ${theme.light.secondary.bgColor}`}>
+            <div className='drop-shadow-md h-40 w-full rounded'>
                 { this.props.image === undefined ? null : this.props.image }
                 <div className='container'>
                     { this.props.title === undefined ? null : <h4 className='font-semibold'>{this.props.title}</h4> }

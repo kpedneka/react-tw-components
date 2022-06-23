@@ -21,16 +21,30 @@ const theme2 = {
   light: {
       primary: {
         bgColor: 'bg-red-400',
-        bgHover: 'hover:bg-red-300',
-        borderColor: 'border-red-400',
+        bgHover: 'hover:bg-red-500',
+        borderColor: 'border-red-500',
         textColor: 'text-white'
       },
       secondary: {
-        bgColor: 'bg-gray-300',
-        bgHover: 'hover:bg-gray-300',
-        borderColor: 'border-gray-400',
-        textColor: 'text-black'
+        bgColor: 'dark:bg-slate-700',
+        bgHover: 'dark:hover:bg-slate-600',
+        borderColor: 'dark:border-slate-600',
+        textColor: 'dark:text-white'
       }
+  },
+  dark: {
+    primary: {
+      bgColor: 'dark:bg-pink-600',
+      bgHover: 'dark:hover:bg-pink-500',
+      borderColor: 'dark:border-pink-500',
+      textColor: 'dark:text-white'
+    },
+    secondary: {
+      bgColor: 'dark:bg-slate-700',
+      bgHover: 'dark:hover:bg-slate-600',
+      borderColor: 'dark:border-slate-600',
+      textColor: 'dark:text-white'
+    }
   }
 }
 
@@ -98,9 +112,6 @@ class App extends React.Component {
         
           <Collection cols={4}>
             <Card title='hello' subtitle='this is just a silly test. Dont mind me at all'/>
-            <Card/>
-            <Card/>
-            <Card/>
             <Card image={<HiCamera/>} title='hello again' subtitle='its me. Ive been wondering if after all these years youd like to meet'/>
           </Collection>
         </Body>

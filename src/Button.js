@@ -11,7 +11,7 @@ class Button extends React.Component {
     render() {
         let content
         const { theme, _ } = this.context
-        if (this.props.link === null) {
+        if (this.props.link === undefined) {
             content = <span className='inline-flex px-2 space-x-1'><span>{this.props.text}</span>{this.props.icon}</span>
         } else {
             content = <a className='inline-flex px-2 space-x-1' href={this.props.link}><span>{this.props.text}</span>{this.props.icon}</a>
@@ -19,7 +19,7 @@ class Button extends React.Component {
 
         return(
             <button 
-              className={`px-2 py-1 rounded-sm border-2 ${theme.light.primary.borderColor} ${theme.light.primary.bgColor} ${theme.light.primary.bgHover}`}
+              className={`px-2 py-1 rounded-sm border-2 ${theme.light.primary.borderColor} ${theme.dark.primary.borderColor} ${theme.light.primary.bgColor} ${theme.dark.primary.bgColor} ${theme.light.primary.bgHover} ${theme.dark.primary.bgHover}`}
               onClick={this.props.onClick}>
                 {content}
             </button>
