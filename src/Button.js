@@ -5,21 +5,22 @@ import { ThemeContext } from './ThemeProvider'
 class Button extends React.Component {
     constructor(props) {
         super(props)
-      }
+    }
     static contextType = ThemeContext
-    
+
     render() {
         let content
         const { theme, _ } = this.context
         if (this.props.link === null) {
-            content = <span className='inline-flex px-1'>{this.props.text} {this.props.icon}</span>
+            content = <span className='inline-flex px-2 space-x-1'><span>{this.props.text}</span>{this.props.icon}</span>
         } else {
-            content = <a className='inline-flex px-1' href={this.props.link}>{this.props.text}{this.props.icon}</a>
+            content = <a className='inline-flex px-2 space-x-1' href={this.props.link}><span>{this.props.text}</span>{this.props.icon}</a>
         }
 
         return(
             <button 
-              className={`group space-x-2 mx-2 px-2 py-1 rounded-sm border-2 ${theme.light.primary.borderColor} ${theme.light.primary.bgHover}`}>
+              className={`px-2 py-1 rounded-sm border-2 ${theme.light.primary.borderColor} ${theme.light.primary.bgColor} ${theme.light.primary.bgHover}`}
+              onClick={this.props.onClick}>
                 {content}
             </button>
         )
@@ -27,7 +28,7 @@ class Button extends React.Component {
 }
 
 Button.propTypes = {
-    text: PropTypes.string,
+    text: PropTypes.string.isRequired,
     icon: PropTypes.element,
     link: PropTypes.string
 }

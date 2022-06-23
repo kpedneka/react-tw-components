@@ -1,15 +1,17 @@
 import React from 'react'
-import { HiAcademicCap } from 'react-icons/hi'
+import { HiAcademicCap, HiSparkles, HiCamera } from 'react-icons/hi'
 
 import {
   Appbar,
   Body,
   Button,
+  Card,
   Sidebar,
   SidebarItem,
   SidebarSubitem,
   ThemeContext,
-  baseTheme
+  baseTheme,
+  Collection
 } from 'react-tw-components'
 import 'react-tw-components/dist/index.css'
 
@@ -87,18 +89,20 @@ class App extends React.Component {
             <SidebarSubitem title='Test' />
           </SidebarItem>
         </Sidebar>
+        
         <Body>
+        
           <p>The content of your website goes here</p>
-          <button
-            className='rounded-sm bg-black text-white py-2 px-4'
-            onClick={this.toggleTheme}
-          >
-            Click to change themes
-          </button>
-          <Button 
-            text='Hello' 
-            icon={<HiAcademicCap/>} />
-          
+        
+          <Button text='Click to change theme' icon={<HiSparkles/>} onClick={this.toggleTheme} />
+        
+          <Collection cols={4}>
+            <Card title='hello' subtitle='this is just a silly test. Dont mind me at all'/>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card image={<HiCamera/>} title='hello again' subtitle='its me. Ive been wondering if after all these years youd like to meet'/>
+          </Collection>
         </Body>
       </div>
     )
