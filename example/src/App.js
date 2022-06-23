@@ -8,35 +8,25 @@ import {
   Sidebar,
   SidebarItem,
   SidebarSubitem,
-  ThemeContext
+  ThemeContext,
+  baseTheme
 } from 'react-tw-components'
 import 'react-tw-components/dist/index.css'
 
-const theme1 = {
-  light: {
-      primary: {
-        bgColor: 'bg-green-400',
-        bgColorHover: 'bg-green-300',
-        textColor: 'text-white'
-      },
-      secondary: {
-        bgColor: 'bg-gray-200',
-        bgColorHover: 'bg-gray-200',
-        textColor: 'text-black'
-      }
-  }
-}
+const theme1 = baseTheme
 
 const theme2 = {
   light: {
       primary: {
         bgColor: 'bg-red-400',
-        bgColorHover: 'bg-red-300',
+        bgHover: 'hover:bg-red-300',
+        borderColor: 'border-red-400',
         textColor: 'text-white'
       },
       secondary: {
         bgColor: 'bg-gray-300',
-        bgColorHover: 'bg-gray-300',
+        bgHover: 'hover:bg-gray-300',
+        borderColor: 'border-gray-400',
         textColor: 'text-black'
       }
   }

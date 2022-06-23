@@ -4,7 +4,7 @@ import Button from './Button'
 import Sidebar from './Sidebar'
 import SidebarItem from './SidebarItem'
 import SidebarSubitem from './SidebarSubitem'
-import ThemeProvider, { ThemeContext } from './ThemeProvider'
+import ThemeProvider, { ThemeContext, baseTheme } from './ThemeProvider'
 
 import './tailwind.css'
 
@@ -16,5 +16,6 @@ export {
   SidebarItem,
   SidebarSubitem,
   ThemeProvider,
-  ThemeContext
+  ThemeContext,
+  baseTheme
 }

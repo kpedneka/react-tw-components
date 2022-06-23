@@ -7,13 +7,14 @@ const baseTheme = {
   light: {
       primary: {
         bgColor: 'bg-green-400',
-        bgColorHover: 'bg-green-300',
+        bgHover: 'hover:bg-green-300',
         borderColor: 'border-green-400',
         textColor: 'text-white'
       },
       secondary: {
         bgColor: 'bg-gray-200',
-        bgColorHover: 'bg-gray-200',
+        bgHover: 'hover:bg-gray-200',
+        borderColor: 'border-gray-400',
         textColor: 'text-black'
       }
   }
@@ -56,4 +57,4 @@ class ThemeProvider extends React.Component {
 }
 
 export default ThemeProvider
-export { ThemeContext }
+export { ThemeContext, baseTheme }

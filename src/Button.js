@@ -19,7 +19,7 @@ class Button extends React.Component {
 
         return(
             <button 
-              className={`group space-x-2 mx-2 px-2 py-1 rounded-sm border-2 ${theme.light.primary.borderColor} hover:bg-green-300`}>
+              className={`group space-x-2 mx-2 px-2 py-1 rounded-sm border-2 ${theme.light.primary.borderColor} ${theme.light.primary.bgHover}`}>
                 {content}
             </button>
         )

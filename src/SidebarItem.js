@@ -14,7 +14,7 @@ class SidebarItem extends React.Component {
     return (
       <li className='space-y-2 mb-2 align-baseline'>
         <div
-          className={`inline-flex hover:${theme.light.primary.bgColorHover} w-full mx-1 p-1 rounded-sm items-center space-x-4 align-baseline`}
+          className={`inline-flex ${theme.light.primary.bgHover} w-full mx-1 p-1 rounded-sm items-center space-x-4 align-baseline`}
         >
           {Icon === undefined ? null : Icon}
           <p>{this.props.title}</p>
