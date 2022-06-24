@@ -19,7 +19,7 @@ class ClickField extends React.Component {
                 name={this.props.name} 
                 value={this.props.value}
                 className={`border-2 focus:outline-none  rounded-md ${theme.light.primary.accentColor} ${theme.dark.primary.accentColor}`} />
-                <label htmlFor={this.props.id}>{this.props.value}</label>
+                <label htmlFor={this.props.id} className='text-inherit'>{this.props.value}</label>
             </div>
         )
     }

@@ -11,15 +11,29 @@ class TextField extends React.Component {
 
     render() {
         const { theme, _ } = this.context
+        const hasLabel = this.props.name ? true : false
+        let field
+        if (hasLabel) {
+            field = <label className='flex flex-col'>
+                <span>{this.props.name}</span>
+                <input type={this.props.type} id={this.props.id} placeholder={this.props.placeholder} className={`border-2 focus:outline-none rounded-md w-40 ${theme.light.secondary.borderColor} ${theme.dark.secondary.borderColor} ${theme.light.primary.focusColor} ${theme.dark.primary.focusColor}`} />
+            </label>
+        } else {
+            field = <input type={this.props.type} id={this.props.id} placeholder={this.props.placeholder} className={`border-2 focus:outline-none rounded-md w-40 ${theme.light.secondary.borderColor} ${theme.dark.secondary.borderColor} ${theme.light.primary.focusColor} ${theme.dark.primary.focusColor}`} />
+        }
         return(
-            <input type={this.props.type} className={`border-2 focus:outline-none  rounded-md ${theme.light.secondary.borderColor} ${theme.dark.secondary.borderColor} ${theme.light.primary.focusColor} ${theme.dark.primary.focusColor}`}>
-            </input>
+            <div>
+                {field}
+            </div>
         )
     }
 }
 
 TextField.propTypes = {
     type: PropTypes.string.isRequired,
+    id: PropTypes.string,
+    name: PropTypes.string,
+    placeholder: PropTypes.string,
     typeValidation: function(props) {
         switch(props.type) {
             case 'text':

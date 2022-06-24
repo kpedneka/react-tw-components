@@ -112,16 +112,17 @@ class App extends React.Component {
         
         <Body>
         
-          <p>The content of your website goes here</p>
+          <p className='text-inherit'>The content of your website goes here</p>
         
           <Button text='Click to change theme' icon={<HiSparkles/>} onClick={this.toggleTheme} />
-          <TextField type='text'/>
+          
           <ClickField type='radio' id='1' name='test' value='Radio button 1' />
           <ClickField type='radio' id='2' name='test' value='Radio button 2'/>
           <ClickField type='radio' id='3' name='test' value='Radio button 3' />
           <ClickField type='checkbox' id='4' value='Checkbox 1'/>
           <ClickField type='checkbox' id='5' value='Checkbox 2'/>
-          <ClickField type='checkbox' id='6' value='Checkbox 3'/>
+          
+          <TextField type='text' id='6' value='Input' name='Input'/>
         </Body>
       </div>
     )
