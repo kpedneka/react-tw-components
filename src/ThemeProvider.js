@@ -6,6 +6,7 @@ import React, { createContext } from 'react'
 const baseTheme = {
   light: {
       primary: {
+        accentColor: 'accent-green-400',
         bgColor: 'bg-green-400',
         bgHover: 'hover:bg-green-500',
         borderColor: 'border-green-500',
@@ -22,6 +23,7 @@ const baseTheme = {
   },
   dark: {
     primary: {
+      accentColor: 'dark:accent-emerald-700',
       bgColor: 'dark:bg-emerald-700',
       bgHover: 'dark:hover:bg-emerald-600',
       borderColor: 'dark:border-emerald-600',

@@ -6,6 +6,7 @@ import {
   baseTheme,
   Body,
   Button,
+  ClickField,
   Sidebar,
   SidebarItem,
   SidebarSubitem,
@@ -19,6 +20,7 @@ const theme1 = baseTheme
 const theme2 = {
   light: {
       primary: {
+        accentColor: 'accent-red-400',
         bgColor: 'bg-red-400',
         bgHover: 'hover:bg-red-500',
         borderColor: 'border-red-500',
@@ -35,6 +37,7 @@ const theme2 = {
   },
   dark: {
     primary: {
+      accentColor: 'dark:accent-pink-600',
       bgColor: 'dark:bg-pink-600',
       bgHover: 'dark:hover:bg-pink-500',
       borderColor: 'dark:border-pink-500',
@@ -113,6 +116,12 @@ class App extends React.Component {
         
           <Button text='Click to change theme' icon={<HiSparkles/>} onClick={this.toggleTheme} />
           <TextField type='text'/>
+          <ClickField type='radio' id='1' name='test' value='Radio button 1' />
+          <ClickField type='radio' id='2' name='test' value='Radio button 2'/>
+          <ClickField type='radio' id='3' name='test' value='Radio button 3' />
+          <ClickField type='checkbox' id='4' value='Checkbox 1'/>
+          <ClickField type='checkbox' id='5' value='Checkbox 2'/>
+          <ClickField type='checkbox' id='6' value='Checkbox 3'/>
         </Body>
       </div>
     )
