@@ -3,15 +3,14 @@ import { HiAcademicCap, HiSparkles, HiCamera } from 'react-icons/hi'
 
 import {
   Appbar,
+  baseTheme,
   Body,
   Button,
-  Card,
   Sidebar,
   SidebarItem,
   SidebarSubitem,
+  TextField,
   ThemeContext,
-  baseTheme,
-  Collection
 } from 'react-tw-components'
 import 'react-tw-components/dist/index.css'
 
@@ -23,13 +22,15 @@ const theme2 = {
         bgColor: 'bg-red-400',
         bgHover: 'hover:bg-red-500',
         borderColor: 'border-red-500',
+        focusColor: 'focus-visible:border-red-500',
         textColor: 'text-white'
       },
       secondary: {
-        bgColor: 'dark:bg-slate-700',
-        bgHover: 'dark:hover:bg-slate-600',
-        borderColor: 'dark:border-slate-600',
-        textColor: 'dark:text-white'
+        bgColor: 'bg-gray-200',
+        bgHover: 'hover:bg-gray-400',
+        borderColor: 'border-gray-400',
+        focusColor: 'focus-visible:border-gray-400',
+        textColor: 'text-black'
       }
   },
   dark: {
@@ -37,12 +38,14 @@ const theme2 = {
       bgColor: 'dark:bg-pink-600',
       bgHover: 'dark:hover:bg-pink-500',
       borderColor: 'dark:border-pink-500',
+      focusColor: 'dark:focus-visible:border-pink-500',
       textColor: 'dark:text-white'
     },
     secondary: {
       bgColor: 'dark:bg-slate-700',
       bgHover: 'dark:hover:bg-slate-600',
       borderColor: 'dark:border-slate-600',
+      focusColor: 'dark:focus-visible:border-slate-600',
       textColor: 'dark:text-white'
     }
   }
@@ -109,11 +112,7 @@ class App extends React.Component {
           <p>The content of your website goes here</p>
         
           <Button text='Click to change theme' icon={<HiSparkles/>} onClick={this.toggleTheme} />
-        
-          <Collection cols={4}>
-            <Card title='hello' subtitle='this is just a silly test. Dont mind me at all'/>
-            <Card image={<HiCamera/>} title='hello again' subtitle='its me. Ive been wondering if after all these years youd like to meet'/>
-          </Collection>
+          <TextField type='text'/>
         </Body>
       </div>
     )
