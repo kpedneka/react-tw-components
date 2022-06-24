@@ -16,7 +16,7 @@ class Sidebar extends React.Component {
     const { theme, setTheme } = this.context
     return (
       <nav
-        className={`z-50 ${theme.light.primary.bgColor} ${ theme.light.primary.textColor } sm:w-1/2 md:w-1/3 lg:w-1/4 h-screen py-6 space-y-6 inset-y-0 left-0 transform ${ this.props.state ? '-translate-x-0' : '-translate-x-full' } relative md:translate-x-0 transition duration-200 ease-in-out`}
+        className={`z-50 ${theme.light.primary.bgColor} ${theme.dark.primary.bgColor} ${theme.light.primary.textColor} ${theme.dark.primary.textColor} sm:w-1/2 md:w-1/3 lg:w-1/4 h-screen py-6 space-y-6 inset-y-0 left-0 transform ${ this.props.state ? '-translate-x-0' : '-translate-x-full' } relative md:translate-x-0 transition duration-200 ease-in-out`}
       >
         <div className='flex flex-row space-x-4 place-content-center'>
           <div className='inline-flex text-4xl px-4'>

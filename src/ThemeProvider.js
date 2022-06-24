@@ -6,15 +6,37 @@ import React, { createContext } from 'react'
 const baseTheme = {
   light: {
       primary: {
+        accentColor: 'accent-green-400',
         bgColor: 'bg-green-400',
-        bgColorHover: 'bg-green-300',
+        bgHover: 'hover:bg-green-500',
+        borderColor: 'border-green-500',
+        focusColor: 'focus-visible:border-green-500',
         textColor: 'text-white'
       },
       secondary: {
-        bgColor: 'bg-gray-200',
-        bgColorHover: 'bg-gray-200',
+        bgColor: 'bg-gray-100',
+        bgHover: 'hover:bg-gray-300',
+        borderColor: 'border-gray-300',
+        focusColor: 'focus-visible:border-gray-300',
         textColor: 'text-black'
       }
+  },
+  dark: {
+    primary: {
+      accentColor: 'dark:accent-emerald-700',
+      bgColor: 'dark:bg-emerald-700',
+      bgHover: 'dark:hover:bg-emerald-600',
+      borderColor: 'dark:border-emerald-600',
+      focusColor: 'dark:focus-visible:border-emerald-600',
+      textColor: 'dark:text-white'
+    },
+    secondary: {
+      bgColor: 'dark:bg-slate-700',
+      bgHover: 'dark:hover:bg-slate-600',
+      borderColor: 'dark:border-slate-600',
+      focusColor: 'dark:focus-visible:border-slate-600',
+      textColor: 'dark:text-white'
+    }
   }
 }
 
@@ -55,4 +77,4 @@ class ThemeProvider extends React.Component {
 }
 
 export default ThemeProvider
-export { ThemeContext }
+export { ThemeContext, baseTheme }

@@ -12,7 +12,7 @@ class SidebarSubitem extends React.Component {
     const { theme, setTheme } = this.context
     return (
       <div
-        className={`ml-8 hover:${theme.light.primary.bgColorHover} px-2 py-1 rounded-sm space-x-4 align-baseline text-sm`}
+        className={`ml-8 ${theme.light.primary.bgHover} px-2 py-1 rounded-sm space-x-4 align-baseline text-sm`}
       >
         <p>{this.props.title}</p>
       </div>

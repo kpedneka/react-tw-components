@@ -9,9 +9,8 @@ class Body extends React.Component {
     const { theme, setTheme } = this.context
     return (
       <div
-        className={`absolute w-full md:w-2/3 lg:w-3/4 h-screen z-10 top-0 right-0 px-12 py-16 ${theme.light.secondary.bgColor}`}
+        className={`absolute w-full md:w-2/3 lg:w-3/4 h-screen z-10 top-0 right-0 px-12 py-16 ${theme.light.secondary.bgColor} ${theme.dark.secondary.bgColor} ${theme.light.secondary.textColor} ${theme.dark.secondary.textColor}`}
       >
-        {' '}
         {this.props.children}
       </div>
     )

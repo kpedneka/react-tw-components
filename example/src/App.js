@@ -1,43 +1,56 @@
 import React from 'react'
-import { HiAcademicCap } from 'react-icons/hi'
+import { HiAcademicCap, HiSparkles, HiCamera } from 'react-icons/hi'
 
 import {
+  Appbar,
+  baseTheme,
+  Body,
+  Button,
+  ClickField,
   Sidebar,
   SidebarItem,
   SidebarSubitem,
-  Appbar,
-  Body,
-  ThemeContext
+  TextField,
+  ThemeContext,
 } from 'react-tw-components'
 import 'react-tw-components/dist/index.css'
 
-const theme1 = {
-  light: {
-      primary: {
-        bgColor: 'bg-green-400',
-        bgColorHover: 'bg-green-300',
-        textColor: 'text-white'
-      },
-      secondary: {
-        bgColor: 'bg-gray-200',
-        bgColorHover: 'bg-gray-200',
-        textColor: 'text-black'
-      }
-  }
-}
+const theme1 = baseTheme
 
 const theme2 = {
   light: {
       primary: {
+        accentColor: 'accent-red-400',
         bgColor: 'bg-red-400',
-        bgColorHover: 'bg-red-300',
+        bgHover: 'hover:bg-red-500',
+        borderColor: 'border-red-500',
+        focusColor: 'focus-visible:border-red-500',
         textColor: 'text-white'
       },
       secondary: {
-        bgColor: 'bg-gray-300',
-        bgColorHover: 'bg-gray-300',
+        bgColor: 'bg-gray-200',
+        bgHover: 'hover:bg-gray-400',
+        borderColor: 'border-gray-400',
+        focusColor: 'focus-visible:border-gray-400',
         textColor: 'text-black'
       }
+  },
+  dark: {
+    primary: {
+      accentColor: 'dark:accent-pink-600',
+      bgColor: 'dark:bg-pink-600',
+      bgHover: 'dark:hover:bg-pink-500',
+      borderColor: 'dark:border-pink-500',
+      focusColor: 'dark:focus-visible:border-pink-500',
+      textColor: 'dark:text-white'
+    },
+    secondary: {
+      bgColor: 'dark:bg-slate-700',
+      bgHover: 'dark:hover:bg-slate-600',
+      borderColor: 'dark:border-slate-600',
+      focusColor: 'dark:focus-visible:border-slate-600',
+      textColor: 'dark:text-white'
+    }
   }
 }
 
@@ -96,14 +109,20 @@ class App extends React.Component {
             <SidebarSubitem title='Test' />
           </SidebarItem>
         </Sidebar>
+        
         <Body>
-          <p>The content of your website goes here</p>
-          <button
-            className='rounded-sm bg-black text-white py-2 px-4'
-            onClick={this.toggleTheme}
-          >
-            Click to change theme
-          </button>
+        
+          <p className='text-inherit'>The content of your website goes here</p>
+        
+          <Button text='Click to change theme' icon={<HiSparkles/>} onClick={this.toggleTheme} />
+          
+          <ClickField type='radio' id='1' name='test' value='Radio button 1' />
+          <ClickField type='radio' id='2' name='test' value='Radio button 2'/>
+          <ClickField type='radio' id='3' name='test' value='Radio button 3' />
+          <ClickField type='checkbox' id='4' value='Checkbox 1'/>
+          <ClickField type='checkbox' id='5' value='Checkbox 2'/>
+          
+          <TextField type='text' id='6' value='Input' name='Input'/>
         </Body>
       </div>
     )
